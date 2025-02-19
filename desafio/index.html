@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suite Store</title>
+</head>
+<body>
+        
+    <div>
+
+            <div>
+                <h1>Suite Store</h1>
+            </div>
+    
+            <div>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="history.html">Hystory</a></li>
+                <li><a href="detail.html">Details</a></li>
+            </div>
+      
+<br>
+               
+            <div>
+                <form>
+                    <label for="produto">Produto:</label>
+                    <select id="produto" name="produto">
+                        <option value=""></option>
+                        <option value="produto1">Produto 1</option>
+                        <option value="produto2">Produto 2</option>
+                        <option value="produto3">Produto 3</option>
+                    </select>
+                </form>
+            </div>
+    
+            
+                <div>
+                    <label for="amount">Amount:</label>
+                    <input type="text" name="amount" id="amount" required/>
+                </div>
+            
+            
+                <div>
+                    <label for="taxvalue">Tax value:</label>
+                    <input type="number" name="tax" id="tax" min="0" disabled>  
+                </div>
+            
+            
+                <div>
+                    <label for="unitprice">Unit price:</label>
+                    <input type="number" name="unit" id="unit" min="0" disabled>
+                </div>
+            
+                <div>
+                    <button>Add Product</button>
+                </div>
+    
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Unit price</th>
+                                <th>Amount</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+        
+                        <tbody>
+                            <tr>
+                                <td>Rice</td>
+                                <td>$20.0</td>
+                                <td>2</td>
+                                <td>40.00</td>
+                                <td>
+                                    <button>Delete</button>
+                                </td>
+                            </tr>
+        
+                            <tr>
+                                <td>Beans</td>
+                                <td>$9.00</td>
+                                <td>1</td>
+                                <td>9.00</td>
+                                <td><button>Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            
+                <div>
+                    <label for="tax">Tax:</label>
+                    <input type="number" name="tax" id="tax" min="0" disabled>
+                </div>
+                
+                <div>
+                    <label for="total">Total:</label>
+                    <input type="number" name="total" id="total" min="0" disabled>
+                </div>
+    
+                <div>
+                    <button>Cancel</button>
+                    <button>Finish</button>
+                </div>
+
+    </div>
+
+
+</body>
+</html>
