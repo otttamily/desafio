@@ -3,50 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hist.css">
     <title>Suite Store</title>
 </head>
 <body>
     
     <div>
 
-        <div>
-            <h1>History</h1>
-        </div>
+        <header>
 
-        <div>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="categories.html">Categories</a></li>
-            <li><a href="history.html">Hystory</a></li>
-            <li><a href="detail.html">Details</a></li>
-        </div>
+            <h1>History</h1>
+
+                <nav>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                 <!-- <li><a href="history.html">History</a></li> -->
+                </nav>
+
+        </header>
+
 <br>
-        <div>
-            <table>
+
+        <div class="conteiner">
+
+            <table class="t_fil">
+
                 <thead>
+
                     <tr>
-                        <th>Code</th>
-                        <th>Tax</th>
-                        <th>Total</th>
+
+                        <th class="t1">Code</th>
+                        <th class="t2">Tax</th>
+                        <th class="t3">Total</th>
+
                     </tr>
+
                 </thead>
+
                 <tbody>
+
                     <tr>
-                        <td>001</td>
-                        <td>$2.00</td>
-                        <td>$20.00</td>
-                        <td>
-                            <button>View</button>
+                        <td class="t1">001</td>
+                        <td class="t2">$2.00</td>
+                        <td class="t3">$20.00</td>
+                        <td class="t4">
+                            <button class="botao">
+                                <a href="detail.html">View</a>
+                            </button>
                         </td>
                     </tr>
+
                     <tr>
-                        <td>002</td>
-                        <td>$0.50</td>
-                        <td>$10.00</td>
-                        <td>View</td>
+                        <td class="t1">002</td>
+                        <td class="t2">$0.50</td>
+                        <td class="t3">$10.00</td>
+                        <td class="t4">
+                            <button class="botao">
+                                <a href="detail.html">View</a>
+                            </button>
+                        </td>
+
                     </tr>
+
                 </tbody>
+
             </table>
+
         </div>
 
     </div>

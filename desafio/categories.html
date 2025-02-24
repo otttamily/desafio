@@ -3,65 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cat.css">
     <title>Document</title>
 </head>
 <body>
     
     <div>
+        
+            <header>
 
-            <div>
                 <h1>Categories</h1>
-            </div>
-
-        <div>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="categories.html">Categories</a></li>
-            <li><a href="history.html">Hystory</a></li>
-            <li><a href="detail.html">Details</a></li>
-        </div>
-        
+            
+                <nav>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                <!-- <li><a href="categories.html">Categories</a></li> -->
+                    <li><a href="history.html">History</a></li>
+                </nav>  
+            </header>        
+            
 <br>
-        
-        <div>
-            <label for="categoryname">Category name:</label>
-            <input type="text" name="categoryname" id="categoryname" required/>
-        </div>
-        
-        <div>
-            <label for="tax">Tax:</label>
-            <input type="text" name="tax" id="tax" required/>
-        </div>
-    
-        <div>
-            <button>Add Category</button>
-        </div>
-        
-        <div>
-            <table>
-                <thead>
-                    <tr>
-                    <th>Code</th>
-                    <th>Category</th>
-                    <th>Tax</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>001</td>
-                        <td>Food</td>
-                        <td>10%</td>
-                        <td><button>Delete</button></td>
-                    </tr>
-                    <tr>
-                        <td>002</td>
-                        <td>Eletro</td>
-                        <td>60%</td>
-                        <td><button>Delete</button></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+         
+        <main>
+            <div class="esquerda">
+                <div class="esq">
+                    <label for="categoryname" class="category">Category name:</label>
+                    <input type="text" name="categoryname" id="categoryname" required class="cat_in">
+                </div>
+                
+                <div class="esq">
+                    <label for="tax" class="tax">Tax:</label>
+                    <input type="text" name="tax" id="tax" required class="tax_in">
+                </div>
+            
+                <div class="b_esq">
+                    <button class="botao_esq">Add Category</button>
+                </div>
+            </div>
+            
+            <div class="direita">
+                <table>
+                    <thead>
+                        <tr>
+                        <th class="t1">Code</th>
+                        <th class="t2">Category</th>
+                        <th class="t3">Tax</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="t1">001</td>
+                            <td class="t2">Food</td>
+                            <td class="t3">10%</td>
+                            <td class="t4">
+                                <button>Delete</button>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="t1">002</td>
+                            <td class="t2">Eletro</td>
+                            <td class="t3">60%</td>
+                            <td class="t4">
+                                <button>Delete</button>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
 
     </div>    
 
