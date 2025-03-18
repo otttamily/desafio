@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Suite Store</title>
 </head>
 <body>
@@ -28,34 +28,32 @@
                     <form>
                         <label for="produto" class="p1">Produto:</label>
                         <select id="produto" name="produto" class="p2">
-                            <option value=""></option>
-                            <option value="produto1">Produto 1</option>
+                            <option value="produto" selected>Product</option>
+                            <!-- <option value="produto1">Produto 1</option>
                             <option value="produto2">Produto 2</option>
-                            <option value="produto3">Produto 3</option>
+                            <option value="produto3">Produto 3</option>-->
                         </select>
                     </form>
                 </div>
         
-        
-                <div class="filho qntd">
-                    <label for="amount">Amount:</label>
-                    <input type="text" name="amount" id="amount" required/>
-                </div>
-        
-        
-                <div class="filho tax">
-                    <label for="taxvalue">Tax value:</label>
-                    <input type="number" name="tax" id="tax" min="0" disabled>  
-                </div>
-        
-        
-                <div class="filho price">
-                    <label for="unitprice">Unit price:</label>
-                    <input type="number" name="unit" id="unit" min="0" disabled>
+                <div class="opt">
+                    
+                    <div class="qntd_1">
+                        <input type="number" name="amount" id="amount" placeholder="amount" class="qntd">
+                    </div>            
+            
+                    <div class="tax_1">
+                        <input type="number" name="tax" id="tax" min="0" placeholder="tax" class="tax">  
+                    </div>          
+            
+                    <div class="price_1">
+                        <input type="number" name="unit" id="unit" min="0" placeholder="unit" class="price">
+                    </div>
+
                 </div>
         
                 <div class="filho botao">
-                    <button class="b_botao">Add Product</button>
+                    <button class="b_botao" onclick="adicionarProduto()">Add Product</button>
                 </div>
             </div>
     
@@ -64,78 +62,63 @@
                     <table>
                         <thead>
                             <tr>
-                                <th class="t1">Product</th>
-                                <th class="t2">Price</th>
-                                <th class="t3">Amount</th>
-                                <th class="t4">Total</th>
+                                <th class="t1 bd">Product</th>
+                                <th class="t2 bd">Price</th>
+                                <th class="t3 bd">Amount</th>
+                                <th class="t4 ">Total</th>
                             </tr>
                         </thead>
         
                         <tbody>
-                            <tr class="t_conteudo">
-                                <td class="t1">Rice</td>
-                                <td class="t2">$20.0</td>
-                                <td class="t3">2</td>
+                            <!--<tr class="t_conteudo">
+                                <td class="t1 bd">Rice</td>
+                                <td class="t2 bd">$20.0</td>
+                                <td class="t3 bd">2</td>
                                 <td class="t4">40.00</td>
-                                <td>
-                                <!--<td><button>Delete</button>
-                                </td> -->
+                                <td><button>Delete</button>
+                                </td>
                             </tr>
         
                             <tr class="t_conteudo">
-                                <td class="t1">Beans</td>
-                                <td class="t2">$9.00</td>
-                                <td class="t3">1</td>
+                                <td class="t1 bd">Beans</td>
+                                <td class="t2 bd">$9.00</td>
+                                <td class="t3 bd">1</td>
                                 <td class="t4">9.00</td>
-                                <!--<td><button>Delete</button>
-                                </td> -->
+                                <td><button>Delete</button>
+                                </td> 
                             </tr>
                                 
                             <tr class="t_conteudo">
-                                <td class="t1">corn</td>
-                                <td class="t2">$6.00</td>
-                                <td class="t3">3</td>
+                                <td class="t1 bd">corn</td>
+                                <td class="t2 bd">$6.00</td>
+                                <td class="t3 bd">3</td>
                                 <td class="t4">18.00</td>
-                                <!--<td><button>Delete</button>
-                                </td> -->
+                                <td><button>Delete</button>
+                                </td>
                             </tr>
 
-                            <tr>
+                            <tr class="prices">
+                                <td class="esp bd"></td>
+                                <td class="esp bd"></td>
+                                <td class="esp bd"></td>
                                 <td class="esp"></td>
-                                <td class="esp"></td>
-                                <td class="esp"></td>
-                                <td class="esp"></td>
-                            </tr>
-
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td class="t3"><label for="tax">Tax:</label></td>
-                                <td class="t4"><input type="number" name="tax" id="tax" min="0" disabled class="tax_f"></td>
-                            </tr>
-
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td class="t3"><label for="total">Total:</label></td>
-                                <td class="t4"><input type="number" name="total" id="total" min="0" disabled class="total_f"></td>
-                            </tr>
+                            </tr>-->
 
                         </tbody>
                     </table>
                 </div>
         
-                   <!--- <div class="tt">
-                        <div class="fim">
-                            <label for="tax" class="tax_f">Tax:</label>
-                            <input type="number" name="tax" id="tax" min="0" disabled class="tax_f">
+                    <div class="tt">
+                        <div>
+                            <label for="tax" class="tax1">Tax:</label>
+                            <input type="number" name="tax" id="tax" min="0" disabled placeholder="$6.50"  class="f_tax">
                         </div>
                         
-                        <div class="fim">
-                            <label for="total" class="total_f">Total:</label>
-                            <input type="number" name="total" id="total" min="0" disabled class="total_f">
+                        <div>
+                            <label for="total" class="total1">Total:</label>
+                            <input type="number" name="total" id="total" min="0" disabled placeholder="$32.50" class="f_total">
                         </div>
-                    </div> -->
+                    </div>
         
                 <div class="b_final">
                     <button class="b_cancel">Cancel</button>
@@ -146,7 +129,6 @@
 
 
     </div>
-
-
+    <script src="js/index.js"></script>
 </body>
 </html>
