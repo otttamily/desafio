@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
         carregarCategorias();
     });
     
-    //Função para adicionar uma categoria ao LocalStorage
+  
     function adicionarCategoria() {
         let nome = document.getElementById("categoryname").value.trim();
         let taxa = document.getElementById("tax").value.trim();
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let categorias = JSON.parse(localStorage.getItem("categorias")) || [];
     
         let novaCategoria = {
-            id: Date.now(), // Gera um ID único
+            id: Date.now(), 
             nome,
             taxa: parseFloat(taxa)
         };
@@ -29,12 +29,11 @@ document.addEventListener("DOMContentLoaded", () => {
         carregarCategorias();
     }
     
-    //Função para carregar categorias na tabela
     function carregarCategorias() {
         let categorias = JSON.parse(localStorage.getItem("categorias")) || [];
         let tabela = document.getElementById("teste");
     
-        tabela.innerHTML = ""; // Limpa antes de atualizar
+        tabela.innerHTML = "";
     
         categorias.forEach((categoria, index) => {
             let row = tabela.insertRow();
@@ -47,8 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
         });
     }
-    
-    //Função para remover uma categoria
+   
     function removerCategoria(id) {
         let categorias = JSON.parse(localStorage.getItem("categorias")) || [];
         let novasCategorias = categorias.filter(categoria => categoria.id !== id);
