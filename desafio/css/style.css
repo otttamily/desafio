@@ -105,6 +105,8 @@ nav a{
 .tax{
     padding: 5px;
     width: 100%;
+    background-color: #ffffff;
+    border: 1px solid gray;
 }
 
 .tax_1{
@@ -114,6 +116,8 @@ nav a{
 .price{
     padding: 5px;
     width: 100%;
+    background-color: #ffffff;
+    border: 1px solid gray;
 }
 
 .price_1{
