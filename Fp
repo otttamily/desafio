@@ -1,0 +1,15 @@
+function finalizarPedido() {
+    let total = parseFloat(document.querySelector(".f_total").value) || 0;
+    let taxa = parseFloat(document.querySelector(".f_tax").value) || 0;
+
+    if (total === 0) {
+        alert("Nenhum produto foi adicionado!");
+        return;
+    }
+
+    salvarPedido(taxa, total);
+    alert("Pedido salvo com sucesso!");
+
+    // Limpa os dados após salvar o pedido
+    cancelarProdutos();
+}
