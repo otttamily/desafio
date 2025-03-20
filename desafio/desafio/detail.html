@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/detail.css">
+    <title>Suite Store</title>
+</head>
+<body>
+
+    <div>
+        <header>
+            <a href="index.html"><h1>Suite Store</h1></a>
+        
+            <nav>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="history.html">History</a></li>
+            </nav>
+        </header>    
+
+<br>
+
+        <main>
+            
+           <div class="esquerda">
+                <div class="bot">
+                    <a href="history.html"><button>Return</button></a>
+                </div>
+            </div>
+    
+            <div class="direita">
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="t1 br">Product</th>
+                                <th class="t2 br">Code</th>
+                                <th class="t3 br">Amount</th>
+                                <th class="t4 br">Value</th>
+                                <th class="t5 br">Tax</th>
+                                <th class="t6">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="t1 br">
+                                    <label for="product"></label>
+                                    <input type="text" name="product" id="product" disabled class="prod">
+                                </td>
+                                <td class="t2 br">
+                                    <label for="code"></label>
+                                    <input type="number" name="code" id="code" disabled class="code">
+                                </td>
+                                <td class="t3 br">
+                                    <label for="amount"></label>
+                                    <input type="number" name="amount" id="amount" disabled class="qntd">
+                                </td>
+                                <td class="t4 br">
+                                    <label for="value"></label>
+                                    <input type="numv" name="value" id="value" disabled class="value">
+                                </td>
+                                <td class="t5 br">
+                                    <label for="tax"></label>
+                                    <input type="number" name="tax" id="tax" disabled class="tax">
+                                </td> 
+                                <td class="t6">
+                                    <label for="total"></label>
+                                    <input type="number" name="total" id="total" disabled class="total">
+                                </td>
+                            </tr>
+    
+                            <tr class="bb">
+                                <td class="t1 br"></td>
+                                <td class="t2 br"></td>
+                                <td class="t3 br"></td>
+                                <td class="t4 br"></td>
+                                <td class="t5 br"></td>
+                                <td class="t6 br"></td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+        
+        <br>
+        
+                <div class="pv">
+                    <label for="purchasevalue" class="value">Purchase Value: </label>
+                    <input type="number" name="purchasevalue" id="purchasevalue" disabled class="purchase" placeholder="29.70">
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+    <script src="js/detail.js"></script>
+</body>
+</html>

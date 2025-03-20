@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Suite Store</title>
+</head>
+<body>
+        
+    <div>
+        <header>
+            <h1>Suite Store</h1>
+        
+            <nav>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="history.html">History</a></li>
+            </nav>
+        </header>
+    
+        <br>
+                
+        <main class="tudo">
+            <div class="conteiner esquerda">
+                <div class="filho produto">
+                    <form>
+                        <label for="produto" class="p1">Produto:</label>
+                        <select id="produto" name="produto" class="p2">
+                            <option value="produto" selected>Product</option>
+                            <!-- As opções serão preenchidas dinamicamente -->
+                        </select>
+                    </form>
+                </div>
+        
+                <div class="opt">
+                    <div class="qntd_1">
+                        <input type="number" name="amount" id="amount" placeholder="amount" class="qntd" min="0">
+                    </div>            
+            
+                    <div class="tax_1">
+                        <input type="text" name="tax" id="tax" min="0" placeholder="tax" class="tax" disabled>  
+                    </div>          
+            
+                    <div class="price_1">
+                        <input type="text" name="unit" id="unit" min="0" placeholder="unit" class="price" disabled>
+                    </div>
+                </div>
+        
+                <div class="filho botao">
+                    <button class="b_botao" onclick="adicionarProduto()">Add Product</button>
+                </div>
+            </div>
+    
+            <div class="direita">
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="t1 bd">Product</th>
+                                <th class="t2 bd">Price</th>
+                                <th class="t3 bd">Amount</th>
+                                <th class="t4 ">Total</th>
+                            </tr>
+                        </thead>
+        
+                        <tbody id="pedido">
+                        </tbody>
+                    </table>
+                </div>
+        
+                <div class="tt">
+                    <div>
+                        <label for="tax" class="tax1">Tax:</label>
+                        <input type="number" name="tax" id="tax" min="0" disabled class="f_tax">
+                    </div>
+                        
+                    <div>
+                        <label for="total" class="total1">Total:</label>
+                        <input type="number" name="total" id="total" min="0" disabled class="f_total">
+                    </div>
+                </div>
+        
+                <div class="b_final">
+                    <button class="b_cancel" onclick="cancelarProdutos()">Cancel</button>
+                    <button class="b_finish" onclick="finalizarPedido()">Finish</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

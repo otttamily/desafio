@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cat.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        
+        <header>
+            <a href="index.html"><h1>Suite Store</h1></a>
+        
+            <nav>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="history.html">History</a></li>
+            </nav>
+        </header>       
+            
+<br>
+         
+        <main>
+            <div class="esquerda">
+                <div class="esq">
+                    <label for="categoryname" class="category">Category name:</label>
+                    <input type="text" name="categoryname" id="categoryname" required class="cat_in" placeholder="Category name">
+                </div>
+                
+                <div class="esq">
+                    <label for="tax" class="tax">Tax:</label>
+                    <input type="number" name="tax" id="tax" required class="tax_in" placeholder="Tax">
+                </div>
+            
+                <div class="b_esq">
+                    <button class="botao_esq" onclick="adicionarCategoria()">Add Category</button>
+                </div>
+            </div>
+            
+            <div class="direita">
+                <div>
+                    <table>
+                        <thead>
+                            <tr >
+                            <th class="t1 bd">Code</th>
+                            <th class="t2 bd">Category</th>
+                            <th class="t3 bd">Tax</th>
+                            </tr>
+                        </thead>
+                        <tbody id="teste">
+                           <!-- <tr>
+                                <td class="t1 bd">001</td>
+                                <td class="t2 bd">Food</td>
+                                <td class="t3 bd">10%</td>
+                                <td class="t4">
+                                    <button>Delete</button>
+                                </td>
+    
+                            </tr>
+    
+                            <tr>
+    
+                                <td class="t1 bd">002</td>
+                                <td class="t2 bd">Eletro</td>
+                                <td class="t3 bd">60%</td>
+                                <td class="t4">
+                                    <button>Delete</button>
+                                </td>
+    
+                            </tr>
+    
+                            <tr class="tb">
+                                <td class="alt bd"></td>
+                                <td class="alt bd"></td>
+                                <td class="alt bd"></td>
+                                <td class="alt"></td>
+                            </tr>-->
+    
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+    </div>    
+    <script src="js/script.js"></script>
+</body>
+</html>

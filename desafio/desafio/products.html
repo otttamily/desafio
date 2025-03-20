@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/prod.css">
+    <title>Suite Store</title>
+</head>
+<body>
+    
+
+    <header>
+        <a href="index.html"><h1>Suite Store</h1></a>
+    
+        <nav>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="history.html">History</a></li>
+        </nav>
+    </header>    
+        
+<br>
+            
+    <div>
+
+        <main>
+            <div class="esquerda">
+                <div>
+                    <label for="productname" class="nome">Product name</label>
+                    <input type="text" name="productname" id="productname" required class="n_prod" placeholder="Product">
+                </div>
+
+                    <div class="ec">
+                        <form>
+                            <label for="category" class="category">Category:</label>
+                            <select name="category" id="category" class="c_cat">
+                                <!--<option value="Category">Category</option>
+                                <option value="produto1">Produto 1</option>
+                                <option value="produto2">Produto 2</option>
+                                <option value="produto3">Produto 3</option>-->
+                            </select>
+                        </form>
+                    </div>
+                   
+                    <div class="au">
+                        <div class="gambiarra">
+                            <label for="amount" class="amount">Amount</label>
+                            <input type="number" name="amount" id="amount" required class="am" placeholder="Amount" min="0">
+                        </div>
+                                        
+                        <div class="gambiarra">
+                            <label for="unitprice" class="price">Unit price</label>
+                            <input type="number" name="unitprice" id="unitprice" min="0" class="u_price" placeholder="Unit Price" >
+                        </div>  
+                    </div>                          
+        
+                    <div class="botao">
+                        <button class="a_bot" onclick="adicionarProduto()">Add Product</button>
+                    </div>
+            </div>
+    
+            <div class="direita">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="t1 br">Code</th>
+                            <th class="t2 br">Product</th>
+                            <th class="t3 br">Amount</th>
+                            <th class="t4 br">Price</th>
+                            <th class="t5 br">Category</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tb">
+                        <!--<tr>
+                            <td class="t1 br">001</td>
+                            <td class="t2 br">Rice</td>
+                            <td class="t3 br">10</td>
+                            <td class="t4 br">20.00</td>
+                            <td class="t5 br">food</td>
+                            <td class="t6">
+                                <button>Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="t1 br">002</td>
+                            <td class="t2 br">Beans</td>
+                            <td class="t3 br">1</td>
+                            <td class="t4 br">9.00</td>
+                            <td class="t5 br">Food</td>
+                            <td class="t6">
+                                <button>Delete</button>
+                            </td>
+                        </tr>
+
+                        <tr class="bb">
+                            <td class="alt br"></td>
+                            <td class="alt br"></td>
+                            <td class="alt br"></td>
+                            <td class="alt br"></td>
+                            <td class="alt br"></td>
+                            <td class="alt"></td>
+                        </tr>-->
+
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+    </div>
+    <script src="js/product.js"></script>
+</body>
+</html>
