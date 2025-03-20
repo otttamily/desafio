@@ -1,0 +1,23 @@
+function calcularTotais() {
+    let linhas = document.querySelectorAll(".t_conteudo");
+    let totalGeral = 0;
+    let totalTaxa = 0;
+
+    linhas.forEach((linha) => {
+        let preco = parseFloat(linha.children[1].textContent.replace("$", ""));
+        let quantidade = parseInt(linha.children[2].textContent);
+        let taxaPercentual = parseFloat(document.getElementById("tax").value) || 0;
+        let valorTaxa = (preco * taxaPercentual / 100) * quantidade;
+
+        totalTaxa += valorTaxa;
+
+        let totalLinha = quantidade * preco;
+        linha.children[3].textContent = totalLinha.toFixed(2);
+        totalGeral += totalLinha;
+    });
+
+    totalGeral += totalTaxa; // Somando as taxas corretamente
+
+    document.querySelector(".f_total").value = totalGeral.toFixed(2);
+    document.querySelector(".f_tax").value = totalTaxa.toFixed(2);
+}
