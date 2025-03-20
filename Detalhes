@@ -1,0 +1,37 @@
+// Função para carregar os detalhes do pedido
+function carregarDetalhes() {
+    // Recupera o código do pedido da URL
+    const params = new URLSearchParams(window.location.search);
+    const codigoPedido = params.get("codigo");
+
+    // Busca os pedidos no localStorage
+    let pedidos = JSON.parse(localStorage.getItem("pedidos")) || [];
+
+    // Encontra o pedido que corresponde ao código
+    let pedidoSelecionado = pedidos.find(pedido => pedido.codigo == codigoPedido);
+
+    if (pedidoSelecionado) {
+        // Preenche os campos com as informações do pedido
+        document.getElementById("pedido-codigo").textContent = pedidoSelecionado.codigo;
+        document.getElementById("pedido-taxa").textContent = `$${pedidoSelecionado.taxa}`;
+        document.getElementById("pedido-total").textContent = `$${pedidoSelecionado.total}`;
+
+        // Exibe os produtos do pedido
+        let produtosHTML = "";
+        let produtos = JSON.parse(localStorage.getItem("produtos")) || [];
+        let produtosPedido = produtos.filter(produto => produto.pedidoCodigo == pedidoSelecionado.codigo);
+
+        produtosPedido.forEach(produto => {
+            produtosHTML += `
+                <p>${produto.nome} - Quantidade: ${produto.quantidade} - Preço: R$${produto.preco.toFixed(2)}</p>
+            `;
+        });
+
+        document.getElementById("pedido-produtos").innerHTML = produtosHTML;
+    } else {
+        alert("Pedido não encontrado!");
+    }
+}
+
+// Chama a função ao carregar a página
+window.onload = carregarDetalhes;
