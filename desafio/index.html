@@ -28,14 +28,13 @@
                         <label for="produto" class="p1">Produto:</label>
                         <select id="produto" name="produto" class="p2">
                             <option value="produto" selected>Product</option>
-                            <!-- As opções serão preenchidas dinamicamente -->
                         </select>
                     </form>
                 </div>
         
                 <div class="opt">
                     <div class="qntd_1">
-                        <input type="number" name="amount" id="amount" placeholder="amount" class="qntd">
+                        <input type="number" name="amount" id="amount" placeholder="amount" class="qntd" min="0">
                     </div>            
             
                     <div class="tax_1">
@@ -64,7 +63,7 @@
                             </tr>
                         </thead>
         
-                        <tbody>
+                        <tbody id="pedido">
                         </tbody>
                     </table>
                 </div>
@@ -83,7 +82,7 @@
         
                 <div class="b_final">
                     <button class="b_cancel" onclick="cancelarProdutos()">Cancel</button>
-                    <button class="b_finish" onclick="salvarPedido()">Finish</button>
+                    <button class="b_finish" onclick="finalizarPedido()">Finish</button>
                 </div>
             </div>
         </main>

@@ -3,6 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
     carregarProdutos()
 })
 
+function testando(str) {
+    return str.replace(/</g, "&lt;").replace(/>/g, "&gt;")
+              .replace(/"/g, "&quot;").replace(/'/g, "&# 039;");
+}
 
 function carregarCategoriasNoSelect() {
     let categorias = JSON.parse(localStorage.getItem("categorias")) || []
@@ -13,11 +17,10 @@ function carregarCategoriasNoSelect() {
     categorias.forEach(categoria => {
         let option = document.createElement("option")
         option.value = categoria.id
-        option.textContent = `${categoria.nome} - ${categoria.taxa}%`
+        option.textContent = `${categoria.nome}`
         select.appendChild(option)
     })
 }
-
 
 function adicionarProduto() {
     let nome = document.getElementById("productname").value.trim()
@@ -29,6 +32,18 @@ function adicionarProduto() {
         alert("Preencha todos os campos!")
         return
     }
+
+        if(quantidade < 0){
+            alert("Preencha todos os campos com um valor válido!")
+            document.getElementById("amount").value = ""
+            return
+        }
+
+        if(preco < 0){
+            alert("Preencha todos os campos com um valor válido!")
+            document.getElementById("unitprice").value = ""
+            return
+        }
 
     let categorias = JSON.parse(localStorage.getItem("categorias")) || []
     let produtos = JSON.parse(localStorage.getItem("produtos")) || []
@@ -55,7 +70,6 @@ function adicionarProduto() {
     carregarProdutos()
 }
 
-//Função para carregar produtos na tabela
 function carregarProdutos() {
     let produtos = JSON.parse(localStorage.getItem("produtos")) || []
     let tabela = document.getElementById("tb")
@@ -67,16 +81,15 @@ function carregarProdutos() {
 
         row.innerHTML = `
             <td class="t1 br">${index + 1}</td>
-            <td class="t2 br">${produto.nome}</td>
+            <td class="t2 br">${testando(produto.nome)}</td>
             <td class="t3 br">${produto.quantidade}</td>
             <td class="t4 br">R$${produto.preco.toFixed(2)}</td>
-            <td class="t5 br">${produto.categoria} (${produto.taxa}%)</td>
+            <td class="t5 br">${produto.categoria}</td>
             <td class="t6"><button onclick="removerProduto(${produto.id})">Delete</button></td>
         `
     })
 }
 
-//Função para remover um produto
 function removerProduto(id) {
     let produtos = JSON.parse(localStorage.getItem("produtos")) || []
     let novosProdutos = produtos.filter(produto => produto.id !== id)

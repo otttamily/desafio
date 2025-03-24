@@ -251,19 +251,19 @@ tr {
 }
 
 .tax1{
-    padding-right: 31px;
+    padding-right: 5px;
     font-weight: bold;
 }
 
 .total1{
-    padding-right: 21px;
+    padding-right: 5px;
     font-weight: bold;
 }
 
 .f_tax{
     padding: 5px;
     font-family: Arial, Helvetica, sans-serif;
-    width: 71px;
+    width: 90px;
     border: none;
     background-color: #ffffff;
 }
@@ -271,7 +271,7 @@ tr {
 .f_total{
     padding: 5px;
     font-family: Arial, Helvetica, sans-serif;
-    width: 71px;
+    width: 85px;
     border: none;
     background-color: #ffffff
 }
